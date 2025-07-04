@@ -1,0 +1,104 @@
+*{
+    margin: 1px;
+    padding: 0px;
+    list-style: none;
+    background-color: black;
+}
+
+/*Macro container, posição de cada elemento na área*/
+.container{
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'article aside' 
+    'footer footer'
+    ; /* Define o layoult visual por meio de nomes de cada área*/
+}
+
+/* ---- Cabeçalho -----*/
+header{
+    grid-area: header; /* Liga os elementos que define no grid template areas*/
+    border: 2px solid white;
+}
+nav{
+    display: flex;
+    justify-content: space-between; /* espaçamento entre os elementos*/
+    align-items: center; /* alinha os itens */
+    border: 2px solid black;
+    padding: 10px;
+    background-color: black;
+} 
+nav a{
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    color: white;
+}
+
+header button{
+    background-color: white;
+    padding: 10px;
+}
+
+header img{
+    border: 2px solid black;
+    width: 100px;
+}
+/* ---- Fim Cabeçalho -----*/
+
+/* ---- Inicio Conteúdo Principal -----*/
+.container-main{
+    display: grid; /*fração pega uma parte proporcional do espaço restante*/
+    grid-template-columns: repeat(3, 1fr); /* Define quatas colunas no me grid vai ter (Outra maneira de fazer grid-template-columns: 1fr 1fr 1fr;) */
+    padding: 10px;
+}
+
+.topo{
+    grid-column: 1 / -1; /* Começa na coluna 1 até antes da coluna 4 */
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.second{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+main{
+    grid-area: main;
+    border: 2px solid rgb(255, 255, 255); 
+}
+
+aside{
+    grid-area: aside;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+article{
+    grid-area: article;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: black;
+    color: white;
+}
+
+footer{
+    grid-area: footer;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
