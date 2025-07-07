@@ -1,36 +1,21 @@
 *{
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: content-box;
-}
-
-nav{
-    border: 2px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img{
-    width: 100px;
-}
-
-ul{
-    display: flex;
-    gap: 1.5rem;
 }
 
 .card{
     display: flex;
     flex-direction: column; /*Distribui os items em colunas ou linhas*/
     justify-content: space-between; /*Distribuir o espaço disponivel entre os elementos*/
-    height: 100%; /*Ocupado todo a altura da tela*/
+    height: 100vh; /*Ocupado todo a altura da tela*/
     border: 2px solid black;
     border-radius: 10px;
-    
-    
-     /* espaçamento entre os items */
+    padding: 10px;
 }
-.conteudo{
+
+
+.container{
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* título e a descrição crescer para "empurrar" o botão para baixo*/
@@ -39,12 +24,8 @@ ul{
     border: 2px solid black;
 }
 
-
 .card img{
     margin: 0 auto;/* centraliza horizontalmente */
     max-width: 100%; /* evita que a imagem ultrapasse o card */
     border-radius: 10px;
-
 }
-
-
