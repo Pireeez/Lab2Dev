@@ -62,6 +62,9 @@
   padding: 22px;
 }
 
+.icon-lupa{
+    cursor: pointer;
+}
 /*-Menu de Lateral-*/
 .box-nav {
   position: relative;
@@ -232,4 +235,42 @@ p {
 .content-footer p {
   text-align: center;
   font-size: 0.9rem;
+}
+
+.container-nav-2{
+    background-color: rgb(48, 48, 48);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-box-2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+
+}
+
+.icon-lupa-2{cursor: pointer;}
+.input-nav{
+    background-color: rgba(128, 128, 128, 0.514);
+    border: none;
+    padding: 8px;
+    color: white;
+    width: 100%;
+    margin: 0px 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-nav:hover{
+    background-color: rgba(128, 128, 128, 0.247);
+
 }

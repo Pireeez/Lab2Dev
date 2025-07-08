@@ -10,27 +10,46 @@
     />
     <title>Blog do café</title>
     <link rel="stylesheet" href="/Blog do Café/style.css" />
+    <script src="/Blog do Café/script/script.js"></script>
   </head>
   <body>
     <div class="grid">
+      <header class="container-nav-2">
+        <nav class="nav-box-2">
+          <input class="input-nav" type="text" placeholder="Digite sua pesquisa.." />
+          <img
+            class="icon-lupa-2"
+            onclick="sumirPesquisa()"
+            src="/Blog do Café/icons/x.png"
+          />
+        </nav>
+      </header>
       <header class="container-nav">
         <nav class="nav-box">
           <div class="box-nav">
             <img class="nav-menu" src="/Blog do Café/images/menu.png" />
             <div class="menu-lateral">
-                <h1 class="menu-text">Menu</h1>
+              <h1 class="menu-text">Menu</h1>
               <ul>
                 <li>Home</li>
                 <li>Contatos</li>
                 <li>Novidades</li>
               </ul>
-                <div class="icon-menu-bar">
-                    <img class="icons-menu" src="/Blog do Café/icons/instagram-orange.png">
-                </div>
+              <div class="icon-menu-bar">
+                <img
+                  class="icons-menu"
+                  src="/Blog do Café/icons/instagram-orange.png"
+                />
+              </div>
             </div>
           </div>
           <img src="/Blog do Café/images/Blog do café logo.png" />
-          <img src="/Blog do Café/images/lupa.png" />
+          <img
+            class="icon-lupa"
+            id="icon-lupa"
+            onclick="aparecerPesquisa()"
+            src="/Blog do Café/images/lupa.png"
+          />
         </nav>
       </header>
 
@@ -133,7 +152,10 @@
           <div class="content-social">
             <h1>Siga o Blog do Café</h1>
             <p>Mantenha-se atualizado através das nossas redes sociais</p>
-            <img class="icon-social"src="/Blog do Café/icons/instagram-black.png"/>
+            <img
+              class="icon-social"
+              src="/Blog do Café/icons/instagram-black.png"
+            />
           </div>
 
           <div class="content-category">
