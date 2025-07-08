@@ -1,0 +1,12 @@
+
+/* Estilos que se aplicam a todas as telas (base, mobile) */
+body {
+    background-color: lightblue;
+}
+
+/* Estilos que se aplicam SOMENTE quando a largura da tela é 768px ou maior */
+@media (min-width: 768px) {
+    body {
+    background-color: rgb(0, 248, 0);
+    }
+}

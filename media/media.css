@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.vermelho{
+    background-color: red;
+    width: 150px;
+    height: 100px;
+
+}
+
+.amarelo{
+    background-color: rgb(238, 255, 0);
+    width: 150px;
+    height: 100px;
+
+}
+
+.verde{
+    background-color: green;
+    width: 150px;
+    height: 100px;
+
+}
+
+.azul{
+    background-color: blue;
+    width: 150px;
+    height: 100px;
+
+}
+
+.roxo{
+    background-color: purple;
+    width: 150px;
+    height: 100px;
+    
+}

@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    transition: 0.5s;
+}
+
+body{
+    background-color: black;
+}

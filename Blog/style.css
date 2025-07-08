@@ -1,9 +1,4 @@
-*{
-    margin: 1px;
-    padding: 0px;
-    list-style: none;
-    background-color: black;
-}
+
 
 /*Macro container, posição de cada elemento na área*/
 .container{
@@ -16,37 +11,51 @@
     ; /* Define o layoult visual por meio de nomes de cada área*/
 }
 
+
 /* ---- Cabeçalho -----*/
 header{
     grid-area: header; /* Liga os elementos que define no grid template areas*/
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
 }
 nav{
     display: flex;
     justify-content: space-between; /* espaçamento entre os elementos*/
     align-items: center; /* alinha os itens */
-    border: 2px solid black;
+    border: 1px solid white;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
     padding: 10px;
-    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 } 
 nav a{
     text-decoration: none;
-    background-color: black;
+    transition: background-color 0.4s ease;
+    border-radius: 5px;
     padding: 10px;
     color: white;
-    transition: background-color 0.4s ease;
-    border-radius: 10px;
+}
+
+.imgnav{
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.imgnav:hover{
+    width: 32px;
 }
 
 nav a:hover{
-    background-color: rgb(64, 71, 71);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 
 }
 
 header button{
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(255, 249, 249);
 }
 
 header img{
@@ -56,42 +65,32 @@ header img{
 /* ---- Fim Cabeçalho -----*/
 
 /* ---- Inicio Conteúdo Principal -----*/
-.container-main{
-    display: grid; /*fração pega uma parte proporcional do espaço restante*/
-    grid-template-columns: repeat(3, 1fr); /* Define quatas colunas no me grid vai ter (Outra maneira de fazer grid-template-columns: 1fr 1fr 1fr;) */
-    padding: 10px;
+
+main{
+    padding-top: 60px;
 }
 
-.topo{
-    grid-column: 1 / -1; /* Começa na coluna 1 até antes da coluna 4 */
-    height: 100%;
-    width: 100%;
-    border: 2px solid rgb(255, 0, 0);
+.container-main{
+    grid-area: main;
+    display: grid; /*fração pega uma parte proporcional do espaço restante*/
+    grid-template-columns: repeat(3, 1fr); /*Define quatas colunas no me grid vai ter (Outra maneira de fazer grid-template-columns: 1fr 1fr 1fr;)*/  
 }
 
 .second{
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+    /* grid-column: 1 / -1; Começa na coluna 1 até antes da coluna 4 */
     border: 2px solid rgb(255, 0, 0);
-}
-
-main{
-    grid-area: main;
-    border: 2px solid rgb(255, 255, 255); 
-}
+} 
 
 aside{
+    padding-top: 60px;
     grid-area: aside;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
 
     display: flex;
     justify-content: space-between;
-    
 }
 
 aside ul{
@@ -100,37 +99,35 @@ aside ul{
     flex-direction: column;
 
     overflow: auto;
-    
+    padding: 10px;
 }
 
 aside ul li{
-    padding: 5px;
+    padding: 10px;
 }
+
 
 aside ul li:hover{
     background-color: rgb(64, 71, 71);
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.4s ease;
 }
 
 article{
     grid-area: article;
     display: flex;
-    align-items: start;
-    padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: black;
-    color: white;
-}
-
-article img{
-    border: 2px solid rgb(255, 255, 255);
-
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 article p{
-    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+article img{
+    border: 2px solid white;
 }
 
 footer{
@@ -139,13 +136,22 @@ footer{
     text-align: center;
     background-color: black;
     color: white;
-    padding: 20px;
 }
 
-.imgText{
-    border: 2px solid white;
-    display: flex;
+.btn-nav {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    opacity: 0.5;  
 }
+
+.btn-nav:hover{
+    background-color: aliceblue;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.52rem;
+}
+
 
 
 
