@@ -3,17 +3,62 @@
     margin: 0px;
 }
 
+
+.section-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    height: 100%;
+}
+
 .container{
+
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
+
+@media (max-width: 414px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  p{
+    margin: 10px;
+  }
+
+  body{
+    background-image: linear-gradient(white, red);
+  }
+}
+
+@media (min-width: 414px) and (max-width: 1024px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    body{
+        background-image: linear-gradient(white, rgb(255, 187, 0));
+    }
+
+    p{
+    margin: 10px;
+  }
+}
+
 
 
 .vermelho{
     background-color: red;
     width: 150px;
     height: 100px;
+    margin: 10px;
 
 }
 
@@ -21,6 +66,7 @@
     background-color: rgb(238, 255, 0);
     width: 150px;
     height: 100px;
+    margin: 10px;
 
 }
 
@@ -28,6 +74,7 @@
     background-color: green;
     width: 150px;
     height: 100px;
+    margin: 10px;
 
 }
 
@@ -35,6 +82,7 @@
     background-color: blue;
     width: 150px;
     height: 100px;
+    margin: 10px;
 
 }
 
@@ -42,5 +90,17 @@
     background-color: purple;
     width: 150px;
     height: 100px;
+    margin: 10px;
     
 }
+
+.rosa{
+    background-color: rgb(255, 87, 233);
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    
+}
+
+
+
