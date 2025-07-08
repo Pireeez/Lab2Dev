@@ -33,7 +33,6 @@
   .container-aside {
     grid-area: aside;
     max-width: 300px;
-
     position: sticky; /* sobe normalmente, mas ao chegar no topo da tela ele fica fixo*/
     top: 0;
     height: fit-content; /* importante para sticky funcionar bem */
@@ -65,7 +64,6 @@
 
 /*-Menu de Lateral-*/
 .box-nav {
-  cursor: pointer;
   position: relative;
 }
 
@@ -76,16 +74,49 @@
   top: 0;
   width: 30vw;
   height: 100vh;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.945);
   color: white;
   padding: 20px;
   z-index: 1000; /* ordem de empilhamento */
 }
 
-.menu-lateral ul{margin-top: 70px;}
-.menu-lateral li{margin-bottom: 10px;}
-.menu-lateral li:hover{color: var(--color-orange);}
-.box-nav:hover .menu-lateral{display: block; /* se torna visivel */}
+.icon-menu-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.icons-menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.1s;
+  
+}
+.icons-menu:hover {
+  width: 32px;
+  height: 32px;
+}
+.menu-text {
+  border-bottom: 1px solid var(--color-orange);
+  padding-bottom: 3px;
+}
+.menu-lateral ul {
+  margin-top: 70px;
+  height: 80%;
+}
+.menu-lateral li {
+  margin-bottom: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu-lateral li:hover {
+  color: var(--color-orange);
+  margin-left: 10px;
+}
+.box-nav:hover .menu-lateral {
+  display: block; /* se torna visivel */
+}
+
 /*-Menu de Lateral-*/
 
 /*---Menu de Navegação---*/
