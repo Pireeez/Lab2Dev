@@ -20,8 +20,7 @@
     "footer footer";
 }
 
-
-@media (min-width: 600px) {
+@media (min-width: 980px) {
   .grid {
     display: grid;
     grid-template-areas:
@@ -30,24 +29,23 @@
       "footer footer";
   }
 
-  .container-aside{
+  /*---Aside posicionamento---*/
+  .container-aside {
     grid-area: aside;
-    display: flex;
     max-width: 300px;
-    align-items: center;
-    
+
+    position: sticky; /* sobe normalmente, mas ao chegar no topo da tela ele fica fixo*/
+    top: 0;
+    height: fit-content; /* importante para sticky funcionar bem */
   }
-  .content-social{
+  .content-social {
     margin-top: 72px;
   }
-
-
-
-
+  /*---Aside posicionamento---*/
 }
 
-
-.container {
+/*---Menu de Navegação---*/
+.container-nav {
   background-color: rgb(48, 48, 48);
   position: fixed;
   width: 100%;
@@ -64,6 +62,34 @@
   margin-top: 72px;
   padding: 22px;
 }
+
+
+/*-Menu de Lateral-*/
+.box-nav {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-lateral {
+  display: none; /*Desativa o seletor -menu lateral*/
+  position: fixed; /* posição fixa na tela*/
+  left: 0;
+  top: 0;
+  width: 30vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  z-index: 1000; /* ordem de empilhamento */
+}
+
+.menu-lateral ul{margin-top: 70px;}
+.menu-lateral li{margin-bottom: 10px;}
+.menu-lateral li:hover{color: var(--color-orange);}
+.box-nav:hover .menu-lateral{display: block; /* se torna visivel */}
+/*-Menu de Lateral-*/
+
+/*---Menu de Navegação---*/
 
 span {
   color: var(--color-orange);
