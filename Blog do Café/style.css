@@ -27,7 +27,7 @@
   background-color: var(--color-white-back);
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
   :root{
     --color-white-back: var(--color-dark-back);
     --color-black: var(--color-orange);
@@ -35,11 +35,9 @@
     --color-gray-dark:var(--color-white-font);
     --color-dark-font:var(--color-white-font);
   }
-
   .icon-social{
     content: url(icons/instagram-orange.png);
   }
-
 }
 
 

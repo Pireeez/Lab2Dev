@@ -11,48 +11,74 @@ html {
   scroll-behavior: smooth;
 }
 
+/*---------------------------Váriaveis---------------------------*/
 :root{
     --cor-roxo:#57004f;
-    --cor-roxo-transp:#57004e1c;
-    --cor-branco: white;
+    --cor-branco-texto: white;
+    --cor-branco-back:white;
+    --cor-roxo-texto:#57004f;
+    --cor-black-text: black;
 }
+/*---------------------------Váriaveis---------------------------*/
+
+
+/*---------------------------Grid---------------------------*/
 .grid{
-    background-color: var(--cor-branco);
+    background-color: var(--cor-branco-back);
     display: grid;
     grid-template-areas: 
     'header header'
     'texto texto '
     'main main'
     'section section'
+    'herancacss herancacss'
     'footer footer';
 }
-.content-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    padding: 10px; 
-}
+/*---------------------------Grid---------------------------*/
+
+
+/*---------------------------Menu Navegação---------------------------*/
 .flex-header{
-    grid-area: header;
-    display: flex;
-    align-items: center;
-    background-color: var(--cor-roxo);
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-roxo);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.content-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px; 
 }
 .list-menu{display: none;}
+/*---------------------------Menu Navegação---------------------------*/
 
+
+/*---------------------------Conteudo de boas vindas---------------------------*/
 .text-principal{
-    grid-area: texto;
-    display: flex;
-    margin-top: 80px;
-    padding: 10px;
+  grid-area: texto;
+  display: flex;
+  margin-top: 80px;
+  padding: 10px;
 }
-span{color: var(--cor-roxo);}
-
+.text-center{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  padding: 10px;
+  border-bottom: 2px solid var(--cor-roxo);
+  border-right: 2px solid var(--cor-roxo);
+  border-radius: 10px;
+}
+.wellcome{color: var(--cor-roxo);}
 .digita {
   display: inline-block;
   overflow: hidden;
@@ -63,7 +89,6 @@ span{color: var(--cor-roxo);}
   font-size: 2rem;
   color: rgb(0, 0, 0);
 }
-
 /* Segunda linha com atraso */
 .digita.delay {
   animation-delay: 0.5s;
@@ -73,19 +98,10 @@ span{color: var(--cor-roxo);}
   from { width: 0; }
   to { width: 100%; }
 }
+/*---------------------------Conteudo de boas vindas---------------------------*/
 
-.text-center{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    padding: 10px;
-    border: 2px solid var(--cor-roxo);
-    border-radius: 10px;
-}
 
+/*---------------------------Conteudo Principal------------------------------*/
 .content-main{
     grid-area: main;
     display: flex;
@@ -105,7 +121,8 @@ span{color: var(--cor-roxo);}
   text-align: start;
   transition: 0.5s;
   height: 300px;
-  border: 0.1px solid var(--cor-roxo-transp);
+  border-bottom: 2px solid var(--cor-roxo);
+  border-right: 2px solid var(--cor-roxo);
   border-radius: 10px;
   flex-grow: 1;
 
@@ -115,7 +132,6 @@ span{color: var(--cor-roxo);}
   z-index: 0;
   cursor: pointer;
 }
-
 /* Faixa animada */
 .h1-main::before {
   content: "";
@@ -128,12 +144,10 @@ span{color: var(--cor-roxo);}
   transform: skewX(-40deg);
   transition: left 0.3s ease;
 }
-
 /* Hover ativa a faixa passando */
 .h1-main:hover::before {
   left: 100%;
 }
-
 /* Efeito visual no hover */
 .h1-main:hover {
   padding-left: 30%;
@@ -141,45 +155,172 @@ span{color: var(--cor-roxo);}
   box-shadow: 10px 10px 10px;
   border-radius: 10px;
   border: 1px solid rgba(128, 128, 128, 0.253);
-  background-color: var(--cor-branco); 
+  background-color: var(--cor-branco-texto); 
 }
+/*---------------------------Conteudo Principal------------------------------*/
+
+
+
+/*---------------------------Conteudo elementos------------------------------*/
 .content-html{
-    grid-area: section;
-    background-color: var(--cor-roxo);
-    margin: 10px;
-    border-radius: 10px;
-    scroll-margin-top: 100px;
+  grid-area: section;
+  background-color: var(--cor-roxo);
+  margin: 10px;
+  border-radius: 10px;
+  scroll-margin-top: 100px;
 }
-
 p{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 strong{
-    text-decoration:underline;
-    margin-right: 10px;
+  text-decoration:underline;
+  margin-right: 10px;
 }
+a{
+  width: 100%; color: var(--cor-black-text);
+}
+.h2-text-principal{
+  text-align: center;
+  background-color: var(--cor-branco-back);
+  color: var(--cor-roxo-texto);
+  font-size: 2rem;
+  border-radius: 10px;
+}
+.list-element-html{
+  width: 100%;
+  margin-top: 10px;
+}
+.start-list{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transition: 0.3s;
+}
+.end-list{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: 0.3s;
+}
+.start-list:hover{
+  padding-right:40%;
+  
+}
+.end-list:hover{
+  padding-left:40%;
+}
+.list-element-html li:hover{
+  box-shadow: 1px 1px 1px;
+  
+}
+.list-element-html li{
+  margin: 10px 0px;
+  background-color: var(--cor-branco-back);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
 
+}
+.list-element-html li a{
+  color: var(--cor-roxo-texto);
+  font-weight: bold;
+}
 .h2-text{
-    border-bottom: 1px solid var(--cor-branco);
+    border-bottom: 1px solid var(--cor-branco-texto);
+    margin-bottom: 30px ;
     font-size: 2.3rem;
+    scroll-margin-top: 100px;
+
 }
 .content-element{
     margin-bottom: 100px;
     background-color: var(--cor-roxo);
     border-radius: 10px;
     margin: 10px;
-    color: var(--cor-branco);
+    color: var(--cor-branco-texto);
     padding: 10px;
-    border: 1px solid var(--cor-branco);
+    border: 1px solid var(--cor-branco-texto);
 }
+/*---------------------------Conteudo elementos------------------------------*/
 
+
+/*---------------------------Conteudo herança css------------------------------*/
+.heranca-css{
+  grid-area: herancacss;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  scroll-margin-top: 90px;
+
+}
+.box-heranca{
+
+  padding: 10px;
+  width: 100%;
+  background-color: var(--cor-roxo);
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.text-heranca{
+  border: 1px solid var(--cor-roxo);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: var(--cor-branco-back);
+  border-radius: 10px;
+}
+.text-h1-heranca {color: var(--cor-roxo-texto); padding-left: 10px; border-bottom: 1px solid var(--cor-roxo); border-radius: 10px;}
+.text-heranca:hover{padding-left: 10px;}
+.box-display{
+  opacity: 0;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: none;
+  background-color: var(--cor-roxo);
+  color: var(--cor-branco-texto);
+  display: flex;
+  flex-direction: column;
+}
+.text-heranca:hover .box-display{
+  display: block;
+  opacity: 1;
+}
+.box-exemplo{
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.box-display p{
+  padding-bottom: 10px;
+}
+span{color: rgb(6, 255, 6)}
+/*---------------------------Conteudo herança css------------------------------*/
+
+/*---------------------------Sinalizador------------------------------*/
+
+
+
+/*---------------------------Sinalizador------------------------------*/
+
+
+/*---------------------------Footer------------------------------*/
 .content-footer{
-    grid-area: footer;
-    border: 1px solid black; 
-    margin: 10px;
+  grid-area: footer;
+  background-color: var(--cor-roxo);
+  padding: 20px;
+  font-size: 0.6rem;
+  color: var(--cor-branco-texto);
+  text-align: center;
 }
-a{width: 100%; color: black;}
-
+/*---------------------------Footer------------------------------*/
