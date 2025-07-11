@@ -5,12 +5,10 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
 }
-
 :root {
   --color-gray: rgb(214, 214, 214);
   --color-orange: orangered;
 }
-
 .grid {
   display: grid;
   grid-template-areas:
@@ -19,7 +17,6 @@
     "aside aside"
     "footer footer";
 }
-
 @media (min-width: 980px) {
   .grid {
     display: grid;
@@ -43,13 +40,13 @@
   /*---Aside posicionamento---*/
 }
 
+
 /*---Menu de Navegação---*/
 .container-nav {
   background-color: rgb(48, 48, 48);
   position: fixed;
   width: 100%;
 }
-
 .nav-box {
   display: flex;
   justify-content: space-between;
@@ -61,7 +58,6 @@
   margin-top: 72px;
   padding: 22px;
 }
-
 .icon-lupa{
     cursor: pointer;
 }
@@ -69,7 +65,6 @@
 .box-nav {
   position: relative;
 }
-
 .menu-lateral {
   display: none; /*Desativa o seletor -menu lateral*/
   position: fixed; /* posição fixa na tela*/
@@ -82,7 +77,6 @@
   padding: 20px;
   z-index: 1000; /* ordem de empilhamento */
 }
-
 .icon-menu-bar{
     display: flex;
     justify-content: center;
@@ -119,11 +113,10 @@
 .box-nav:hover .menu-lateral {
   display: block; /* se torna visivel */
 }
-
 /*-Menu de Lateral-*/
-
 /*---Menu de Navegação---*/
 
+/*---Conteúdo Main---*/
 span {
   color: var(--color-orange);
   font-weight: bold;
@@ -147,7 +140,6 @@ p {
   font-size: 1rem;
   margin: 20px 0px;
 }
-
 .text-little {
   margin-top: 2px;
   color: grey;
@@ -166,20 +158,20 @@ p {
   overflow: hidden; /* para conter o float */
   margin-bottom: 20px;
 }
+/*---Conteúdo Main---*/
 
+/*------------------Conteúdo Aside------------------*/
 .container-aside {
   grid-area: aside;
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
-
 .h1-aside {
   font-size: 1.1rem;
   text-align: start;
   margin-bottom: 10px;
 }
-
 /*---Conteudo Social---*/
 .content-social {
   text-align: center;
@@ -191,7 +183,6 @@ p {
   width: 30px;
   height: 30px;
 }
-
 .icon-social:hover {
   width: 30px;
   height: 30px;
@@ -205,13 +196,11 @@ p {
   padding: 10px;
   border: 1px solid var(--color-gray);
 }
-
 .box-list ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .box-list ul li {
   border: 1px solid var(--color-gray);
   padding: 5px;
@@ -219,24 +208,26 @@ p {
   margin: 2px;
   cursor: pointer;
 }
-
 .box-list ul li:hover {
   background-color: rgb(255, 123, 0);
   color: white;
 }
 /*---Conteudo das Categorias---*/
+/*------------------Conteúdo Aside------------------*/
 
+/*---Conteúdo Footer---*/
 .container-footer {
   grid-area: footer;
   background-color: rgb(48, 48, 48);
   text-align: center;
 }
-
 .content-footer p {
   text-align: center;
   font-size: 0.9rem;
 }
+/*---Conteúdo Footer---*/
 
+/*---Segundo Navegador---*/
 .container-nav-2{
     background-color: rgb(48, 48, 48);
     width: 100vw;
@@ -247,7 +238,6 @@ p {
     position: fixed;
     width: 100%;
 }
-
 .nav-box-2{
     display: flex;
     justify-content: space-between;
@@ -257,7 +247,6 @@ p {
     margin: 10px;
 
 }
-
 .icon-lupa-2{cursor: pointer;}
 .input-nav{
     background-color: rgba(128, 128, 128, 0.514);
@@ -269,8 +258,7 @@ p {
     outline: none;
     border-radius: 5px;
 }
-
 .input-nav:hover{
     background-color: rgba(128, 128, 128, 0.247);
-
 }
+/*---Segundo Navegador---*/

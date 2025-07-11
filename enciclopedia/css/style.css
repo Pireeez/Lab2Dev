@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+    --cor-roxo:#57004f;
+    --cor-roxo-transp:#57004e1c;
+    --cor-branco: white;
+}
+.grid{
+    background-color: var(--cor-branco);
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'texto texto '
+    'main main'
+    'section section'
+    'footer footer';
+}
+.content-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px; 
+}
+.flex-header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-roxo);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.list-menu{display: none;}
+
+.text-principal{
+    grid-area: texto;
+    display: flex;
+    margin-top: 80px;
+    padding: 10px;
+}
+span{color: var(--cor-roxo);}
+
+.digita {
+  display: inline-block;
+  overflow: hidden;
+  border-bottom: 2px solid var(--cor-roxo);
+  white-space: nowrap;
+  width: 0;
+  animation: digitar 1.5s steps(100, end) forwards;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+/* Segunda linha com atraso */
+.digita.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes digitar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.text-center{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    border: 2px solid var(--cor-roxo);
+    border-radius: 10px;
+}
+
+.content-main{
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 0px 10px;
+    height: 100vh;
+    text-align: center;
+}
+.h1-main {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  transition: 0.5s;
+  height: 300px;
+  border: 0.1px solid var(--cor-roxo-transp);
+  border-radius: 10px;
+  flex-grow: 1;
+
+  position: relative; /* Necessário para o ::before funcionar */
+  overflow: hidden;   /* Para esconder a faixa fora do h1 */
+  padding: 20px;
+  z-index: 0;
+  cursor: pointer;
+}
+
+/* Faixa animada */
+.h1-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--cor-roxo); /* Cor da faixa, pode trocar */
+  transform: skewX(-40deg);
+  transition: left 0.3s ease;
+}
+
+/* Hover ativa a faixa passando */
+.h1-main:hover::before {
+  left: 100%;
+}
+
+/* Efeito visual no hover */
+.h1-main:hover {
+  padding-left: 30%;
+  color: var(--cor-roxo);
+  box-shadow: 10px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.253);
+  background-color: var(--cor-branco); 
+}
+.content-html{
+    grid-area: section;
+    background-color: var(--cor-roxo);
+    margin: 10px;
+    border-radius: 10px;
+    scroll-margin-top: 100px;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+strong{
+    text-decoration:underline;
+    margin-right: 10px;
+}
+
+.h2-text{
+    border-bottom: 1px solid var(--cor-branco);
+    font-size: 2.3rem;
+}
+.content-element{
+    margin-bottom: 100px;
+    background-color: var(--cor-roxo);
+    border-radius: 10px;
+    margin: 10px;
+    color: var(--cor-branco);
+    padding: 10px;
+    border: 1px solid var(--cor-branco);
+}
+
+.content-footer{
+    grid-area: footer;
+    border: 1px solid black; 
+    margin: 10px;
+}
+a{width: 100%; color: black;}
+
