@@ -1,343 +1,366 @@
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/enciclopedia/css/style.css" />
-    <title>Enciclopédia HTML e CSS</title>
-  </head>
-  <body>
-    <div class="grid">
-      <header class="flex-header">
-        <nav class="content-nav">
-          <img
-            class="img-nav"
-            src="/enciclopedia/img/logo_branco.png"
-            width="115px"
-            height="60px"
-          />
-          <ul class="list-menu">
-            <li>Elementos HTML</li>
-            <li>Controle de Herança no CSS</li>
-            <li>Sinalizador</li>
-          </ul>
-          <img src="/enciclopedia/img/menu.png" />
-        </nav>
-      </header>
-      <div class="text-principal">
-        <div class="text-center">
-          <h1 class="digita">Olá <span class="wellcome">Bem-Vindo</span> ao</h1>
-          <h1 class="digita delay">Enciclopédia HTML e CSS</h1>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/enciclopedia/css/style.css" />
+  <title>Enciclopédia HTML e CSS</title>
+</head>
+
+<body>
+  <div class="grid">
+    <header class="flex-header">
+      <nav class="content-nav">
+        <img class="img-nav" src="/enciclopedia/img/logo_branco.png" width="115px" height="60px" />
+        <ul class="list-menu">
+          <li>Elementos HTML</li>
+          <li>Controle de Herança no CSS</li>
+          <li>Sinalizador</li>
+        </ul>
+        <img src="/enciclopedia/img/menu.png" />
+      </nav>
+    </header>
+    <div class="text-principal">
+      <div class="text-center">
+        <h1 class="digita">Olá <span class="wellcome">Bem-Vindo</span> ao</h1>
+        <h1 class="digita delay">Enciclopédia HTML e CSS</h1>
+      </div>
+    </div>
+
+    <main class="content-main">
+      <a href="#html-css">
+        <h1 class="h1-main">Elementos HTML</h1>
+      </a>
+
+      <a href="#heranca">
+        <h1 class="h1-main">Controle de Herança no CSS</h1>
+      </a>
+
+      <a href="#flag">
+        <h1 class="h1-main">Sinalizador !important</h1>
+      </a>
+    </main>
+    <section id="html-css" class="content-html">
+      <div class="content-element">
+        <h2 class="h2-text-principal">Elementos HTML</h2>
+        <ul class="list-element-html">
+          <li><a class="start-list" href="#p">&lt;p&gt;</a></li>
+          <li><a class="end-list" href="#a">&lt;a&gt;</a></li>
+          <li><a class="start-list" href="#h1">&lt;h1&gt;</a></li>
+          <li><a class="end-list" href="#img">&lt;img&gt;</a></li>
+          <li><a class="start-list" href="#ul">&lt;ul&gt;</a></li>
+          <li><a class="end-list" href="#ol">&lt;ol&gt;</a></li>
+          <li><a class="start-list" href="#input">&lt;input&gt;</a></li>
+          <li><a class="end-list" href="#form">&lt;form&gt;</a></li>
+          <li><a class="start-list" href="#button">&lt;button&gt;</a></li>
+          <li><a class="end-list" href="#div">&lt;div&gt;</a></li>
+        </ul>
       </div>
 
-      <main class="content-main">
-        <a href="#html-css">
-          <h1 class="h1-main">Elementos HTML</h1>
-        </a>
+      <div class="content-element">
+        <h2 id="p" class="h2-text">Elemento &lt;p&gt;</h2>
+        <p><strong>Descrição:</strong> Representa um parágrafo de texto.</p>
+        <br />
+        <p><strong>Atributos principais:</strong>id, class, style, lang</p>
+        <br />
+        <p><strong>Quando utilizar:</strong> Para exibir blocos de texto.</p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong>&lt;p&gt;Esse é um parágrafo
+          explicativo.&lt;/p&gt;
+        </p>
+      </div>
 
-        <a href="#heranca">
-          <h1 class="h1-main">Controle de Herança no CSS</h1>
-        </a>
+      <div class="content-element">
+        <h2 id="a" class="h2-text">Elemento &lt;a&gt;</h2>
+        <p>
+          <strong>Descrição:</strong> Cria um link clicável para outra página
+          ou recurso.
+        </p>
+        <br />
+        <p><strong>Atributos principais:</strong>href, target, rel</p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Sempre que quiser direcionar o
+          usuário para outro local.
+        </p>
+        <br />
+        <p>
+          <strong></strong>&lt;a href="https://developer.mozilla.org"
+          target="_blank"&gt;Visite a MDN&lt;/a&gt;
+        </p>
+      </div>
+      <div class="content-element">
+        <h2 id="h1" class="h2-text">Elemento &lt;h1&gt;</h2>
+        <p>
+          <strong>Descrição:</strong> Representa o título de nível 1 (mais
+          importante).
+        </p>
+        <br />
+        <p><strong>Atributos principais:</strong> id, class, style</p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para destacar o título principal
+          de uma seção ou página.
+        </p>
+        <br />
+        <p><strong>Exemplo:</strong> &lt;h1&gt;Título Principal&lt;/h1&gt;</p>
+      </div>
 
-        <a href="#sinalizador">
-          <h1 class="h1-main">Sinalizador !important</h1>
-        </a>
-      </main>
-      <section id="html-css" class="content-html">
-        <div class="content-element">
-          <h2 class="h2-text-principal">Elementos HTML</h2>
-          <ul class="list-element-html">
-            <li><a class="start-list" href="#p">&lt;p&gt;</a></li>
-            <li><a class="end-list" href="#a">&lt;a&gt;</a></li>
-            <li><a class="start-list" href="#h1">&lt;h1&gt;</a></li>
-            <li><a class="end-list" href="#img">&lt;img&gt;</a></li>
-            <li><a class="start-list" href="#ul">&lt;ul&gt;</a></li>
-            <li><a class="end-list" href="#ol">&lt;ol&gt;</a></li>
-            <li><a class="start-list" href="#input">&lt;input&gt;</a></li>
-            <li><a class="end-list" href="#form">&lt;form&gt;</a></li>
-            <li><a class="start-list" href="#button">&lt;button&gt;</a></li>
-            <li><a class="end-list" href="#div">&lt;div&gt;</a></li>
-          </ul>
-        </div>
+      <div class="content-element">
+        <h2 id="img" class="h2-text">Elemento &lt;img&gt;</h2>
+        <p><strong>Descrição:</strong> Insere uma imagem na página.</p>
+        <br />
+        <p>
+          <strong>Atributos principais:</strong> src, alt, width, height, id,
+          class
+        </p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para exibir imagens no conteúdo.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;img src="imagem.jpg" alt="Descrição da
+          imagem"&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="p" class="h2-text">Elemento &lt;p&gt;</h2>
-          <p><strong>Descrição:</strong> Representa um parágrafo de texto.</p>
-          <br />
-          <p><strong>Atributos principais:</strong>id, class, style, lang</p>
-          <br />
-          <p><strong>Quando utilizar:</strong> Para exibir blocos de texto.</p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong>&lt;p&gt;Esse é um parágrafo
-            explicativo.&lt;/p&gt;
-          </p>
-        </div>
+      <div class="content-element">
+        <h2 id="ul" class="h2-text">Elemento &lt;ul&gt;</h2>
+        <p>
+          <strong>Descrição:</strong> Cria uma lista não ordenada (com
+          marcadores).
+        </p>
+        <br />
+        <p><strong>Atributos principais:</strong> id, class, style</p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para listar itens sem ordem
+          específica.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;ul&gt;&lt;li&gt;Item
+          1&lt;/li&gt;&lt;/ul&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="a" class="h2-text">Elemento &lt;a&gt;</h2>
-          <p>
-            <strong>Descrição:</strong> Cria um link clicável para outra página
-            ou recurso.
-          </p>
-          <br />
-          <p><strong>Atributos principais:</strong>href, target, rel</p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Sempre que quiser direcionar o
-            usuário para outro local.
-          </p>
-          <br />
-          <p>
-            <strong></strong>&lt;a href="https://developer.mozilla.org"
-            target="_blank"&gt;Visite a MDN&lt;/a&gt;
-          </p>
-        </div>
-        <div class="content-element">
-          <h2 id="h1" class="h2-text">Elemento &lt;h1&gt;</h2>
-          <p>
-            <strong>Descrição:</strong> Representa o título de nível 1 (mais
-            importante).
-          </p>
-          <br />
-          <p><strong>Atributos principais:</strong> id, class, style</p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para destacar o título principal
-            de uma seção ou página.
-          </p>
-          <br />
-          <p><strong>Exemplo:</strong> &lt;h1&gt;Título Principal&lt;/h1&gt;</p>
-        </div>
+      <div class="content-element">
+        <h2 id="ol" class="h2-text">Elemento &lt;ol&gt;</h2>
+        <p><strong>Descrição:</strong> Cria uma lista ordenada (numerada).</p>
+        <br />
+        <p>
+          <strong>Atributos principais:</strong> type, start, reversed, id,
+          class
+        </p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para listar itens em ordem
+          sequencial.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;ol&gt;&lt;li&gt;Primeiro
+          item&lt;/li&gt;&lt;/ol&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="img" class="h2-text">Elemento &lt;img&gt;</h2>
-          <p><strong>Descrição:</strong> Insere uma imagem na página.</p>
-          <br />
-          <p>
-            <strong>Atributos principais:</strong> src, alt, width, height, id,
-            class
-          </p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para exibir imagens no conteúdo.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;img src="imagem.jpg" alt="Descrição da
-            imagem"&gt;
-          </p>
-        </div>
+      <div class="content-element">
+        <h2 id="input" class="h2-text">Elemento &lt;input&gt;</h2>
+        <p><strong>Descrição:</strong> Campo de entrada de dados.</p>
+        <br />
+        <p>
+          <strong>Atributos principais:</strong> type, name, placeholder,
+          value, id
+        </p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para coletar dados do usuário.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;input type="text" placeholder="Digite
+          aqui"&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="ul" class="h2-text">Elemento &lt;ul&gt;</h2>
-          <p>
-            <strong>Descrição:</strong> Cria uma lista não ordenada (com
-            marcadores).
-          </p>
-          <br />
-          <p><strong>Atributos principais:</strong> id, class, style</p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para listar itens sem ordem
-            específica.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;ul&gt;&lt;li&gt;Item
-            1&lt;/li&gt;&lt;/ul&gt;
-          </p>
-        </div>
+      <div class="content-element">
+        <h2 id="form" class="h2-text">Elemento &lt;form&gt;</h2>
+        <p>
+          <strong>Descrição:</strong> Agrupa campos de entrada e envia dados.
+        </p>
+        <br />
+        <p>
+          <strong>Atributos principais:</strong> action, method, id, class
+        </p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para criar formulários de envio.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;form action="/enviar"
+          method="post"&gt;&lt;/form&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="ol" class="h2-text">Elemento &lt;ol&gt;</h2>
-          <p><strong>Descrição:</strong> Cria uma lista ordenada (numerada).</p>
-          <br />
-          <p>
-            <strong>Atributos principais:</strong> type, start, reversed, id,
-            class
-          </p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para listar itens em ordem
-            sequencial.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;ol&gt;&lt;li&gt;Primeiro
-            item&lt;/li&gt;&lt;/ol&gt;
-          </p>
-        </div>
+      <div class="content-element">
+        <h2 id="button" id="button" class="h2-text">
+          Elemento &lt;button&gt;
+        </h2>
+        <p><strong>Descrição:</strong> Cria um botão clicável.</p>
+        <br />
+        <p><strong>Atributos principais:</strong> type, onclick, id, class</p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para ações, envios de formulário
+          ou interações.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;button
+          type="submit"&gt;Enviar&lt;/button&gt;
+        </p>
+      </div>
 
-        <div class="content-element">
-          <h2 id="input" class="h2-text">Elemento &lt;input&gt;</h2>
-          <p><strong>Descrição:</strong> Campo de entrada de dados.</p>
-          <br />
-          <p>
-            <strong>Atributos principais:</strong> type, name, placeholder,
-            value, id
-          </p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para coletar dados do usuário.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;input type="text" placeholder="Digite
-            aqui"&gt;
-          </p>
-        </div>
+      <div class="content-element">
+        <h2 id="div" id="div" class="h2-text">Elemento &lt;div&gt;</h2>
+        <p>
+          <strong>Descrição:</strong> Container genérico para agrupar
+          conteúdos.
+        </p>
+        <br />
+        <p><strong>Atributos principais:</strong> id, class, style</p>
+        <br />
+        <p>
+          <strong>Quando utilizar:</strong> Para organizar a estrutura da
+          página.
+        </p>
+        <br />
+        <p>
+          <strong>Exemplo:</strong> &lt;div class="container"&gt;Conteúdo
+          aqui&lt;/div&gt;
+        </p>
+      </div>
+    </section>
 
-        <div class="content-element">
-          <h2 id="form" class="h2-text">Elemento &lt;form&gt;</h2>
-          <p>
-            <strong>Descrição:</strong> Agrupa campos de entrada e envia dados.
-          </p>
-          <br />
-          <p>
-            <strong>Atributos principais:</strong> action, method, id, class
-          </p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para criar formulários de envio.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;form action="/enviar"
-            method="post"&gt;&lt;/form&gt;
-          </p>
-        </div>
+    <section id="heranca" class="heranca-css">
+      <div class="box-heranca">
 
-        <div class="content-element">
-          <h2 id="button" id="button" class="h2-text">
-            Elemento &lt;button&gt;
-          </h2>
-          <p><strong>Descrição:</strong> Cria um botão clicável.</p>
-          <br />
-          <p><strong>Atributos principais:</strong> type, onclick, id, class</p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para ações, envios de formulário
-            ou interações.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;button
-            type="submit"&gt;Enviar&lt;/button&gt;
-          </p>
-        </div>
+        <div class="text-heranca">
+          <h1 class="text-h1-heranca">inherit</h1>
 
-        <div class="content-element">
-          <h2 id="div" id="div" class="h2-text">Elemento &lt;div&gt;</h2>
-          <p>
-            <strong>Descrição:</strong> Container genérico para agrupar
-            conteúdos.
-          </p>
-          <br />
-          <p><strong>Atributos principais:</strong> id, class, style</p>
-          <br />
-          <p>
-            <strong>Quando utilizar:</strong> Para organizar a estrutura da
-            página.
-          </p>
-          <br />
-          <p>
-            <strong>Exemplo:</strong> &lt;div class="container"&gt;Conteúdo
-            aqui&lt;/div&gt;
-          </p>
-        </div>
-      </section>
-
-      <section id="heranca" class="heranca-css">
-        <div  class="box-heranca">
-
-          <div class="text-heranca">
-            <h1 class="text-h1-heranca">inherit</h1>
-
-            <div class="box-display">
+          <div class="box-display">
+            <p>
+              <strong>Descrição:</strong>Faz com que uma propriedade herde o
+              valor do seu elemento pai, mesmo que essa propriedade
+              normalmente não seja herdada por padrão.
+            </p>
+            <p>
+              <strong>Quando usar:</strong>Quando você quer forçar a herança
+              de uma propriedade específica.
+            </p>
+            <p><strong>Exemplo de uso:</strong></p>
+            <div class="box-exemplo">
               <p>
-                <strong>Descrição:</strong>Faz com que uma propriedade herde o
-                valor do seu elemento pai, mesmo que essa propriedade
-                normalmente não seja herdada por padrão.
+                <span> div</span> { <br />
+                &emsp;border: inherit;<br />
+                }
               </p>
-              <p>
-                <strong>Quando usar:</strong>Quando você quer forçar a herança
-                de uma propriedade específica.
-              </p>
-              <p><strong>Exemplo de uso:</strong></p>
-              <div class="box-exemplo">
-                <p>
-                  <span> div</span> { <br />
-                  &emsp;border: inherit;<br />
-                  }
-                </p>
-              </div>
             </div>
           </div>
-
-          <div class="text-heranca">
-            <h1 class="text-h1-heranca">initial</h1>
-            <div class="box-display">
-              <p><strong>Descrição:</strong> Define a propriedade com seu valor padrão do CSS, ignorando valores herdados ou
-                definidos anteriormente.</p>
-              <p><strong>Quando usar:</strong> Quando você quer remover completamente qualquer estilo aplicado e voltar ao
-                comportamento padrão do navegador.</p>
-              <p><strong>Exemplo de uso:</strong></p>
-              <div class="box-exemplo">
-                <p>
-                  <span> p</span> { <br>
-                  &emsp;margin: initial;<br>
-                  }
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-heranca">
-            <h1 class="text-h1-heranca">unset</h1>
-            <div class="box-display">
-              <p><strong>Descrição:</strong> Remove qualquer valor aplicado: se a propriedade for herdável, ela será herdada; caso
-                contrário, será definida com seu valor padrão.</p>
-              <p><strong>Quando usar:</strong> Quando você quer que a propriedade se comporte como se não tivesse sido definida —
-                herdando ou voltando ao padrão dependendo do caso.</p>
-              <p><strong>Exemplo de uso:</strong></p>
-              <div class="box-exemplo">
-                <p>
-                  <span> span</span> { <br>
-                  &emsp;font-weight: unset;<br>
-                  }
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-heranca">
-            <h1 class="text-h1-heranca">revert</h1>
-            <div class="box-display">
-              <p><strong>Descrição:</strong> Reverte a propriedade para o valor aplicado por estilos do navegador (user-agent) ou
-                folha de estilo anterior.</p>
-              <p><strong>Quando usar:</strong> Quando você quer ignorar regras personalizadas e voltar ao estilo "original" do
-                navegador ou regras anteriores da cascata.</p>
-              <p><strong>Exemplo de uso:</strong></p>
-              <div class="box-exemplo">
-                <p>
-                  <span> a</span> { <br>
-                  &emsp;text-decoration: revert;<br>
-                  }
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
-      <footer class="content-footer">
-        <h3>© 2025 Gustavo Pires. Todos os direitos reservados</h3>
-      </footer>
-    </div>
-  </body>
+
+        <div class="text-heranca">
+          <h1 class="text-h1-heranca">initial</h1>
+          <div class="box-display">
+            <p><strong>Descrição:</strong> Define a propriedade com seu valor padrão do CSS, ignorando valores herdados
+              ou
+              definidos anteriormente.</p>
+            <p><strong>Quando usar:</strong> Quando você quer remover completamente qualquer estilo aplicado e voltar ao
+              comportamento padrão do navegador.</p>
+            <p><strong>Exemplo de uso:</strong></p>
+            <div class="box-exemplo">
+              <p>
+                <span> p</span> { <br>
+                &emsp;margin: initial;<br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-heranca">
+          <h1 class="text-h1-heranca">unset</h1>
+          <div class="box-display">
+            <p><strong>Descrição:</strong> Remove qualquer valor aplicado: se a propriedade for herdável, ela será
+              herdada; caso
+              contrário, será definida com seu valor padrão.</p>
+            <p><strong>Quando usar:</strong> Quando você quer que a propriedade se comporte como se não tivesse sido
+              definida —
+              herdando ou voltando ao padrão dependendo do caso.</p>
+            <p><strong>Exemplo de uso:</strong></p>
+            <div class="box-exemplo">
+              <p>
+                <span> span</span> { <br>
+                &emsp;font-weight: unset;<br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-heranca">
+          <h1 class="text-h1-heranca">revert</h1>
+          <div class="box-display">
+            <p><strong>Descrição:</strong> Reverte a propriedade para o valor aplicado por estilos do navegador
+              (user-agent) ou
+              folha de estilo anterior.</p>
+            <p><strong>Quando usar:</strong> Quando você quer ignorar regras personalizadas e voltar ao estilo
+              "original" do
+              navegador ou regras anteriores da cascata.</p>
+            <p><strong>Exemplo de uso:</strong></p>
+            <div class="box-exemplo">
+              <p>
+                <span> a</span> { <br>
+                &emsp;text-decoration: revert;<br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="flag" class="flag-grid">
+      <div class="flag-box">
+        <h1>Sinalizador !important</h1>
+        <p><strong>Descrição:</strong>O sinalizador<code>&emsp;!important</code> é usado para forçar uma regra CSS a se sobrepor a outras, mesmo que elas tenham maior especificidade.</p><br>
+        <p><strong>Quando usar:</strong> Use <code>&emsp;!important</code> apenas quando necessário, como última alternativa para resolver conflitos de estilo. Evite o uso excessivo, pois ele pode dificultar a manutenção do código.</p><br>
+        <p><strong>Exemplo de utilização:</strong> </p><br>
+        <h3>HTML:</h3>
+        <div class="box-exemplo">
+            <p>
+              &lt;<span>div </span> class="box-important">Texto com cor forçada!&lt;/<span>div</span>&gt;
+            </p>
+          </div>
+          <h3>CSS:</h3>
+          <div class="box-exemplo">
+            <p> 
+                <span> .box-important </span> { <br>
+                &emsp;color: red !important;<br>
+                }
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <footer class="content-footer">
+      <h3>© 2025 Gustavo Pires. Todos os direitos reservados</h3>
+    </footer>
+  </div>
+</body>
 </html>

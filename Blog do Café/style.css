@@ -27,7 +27,7 @@
   background-color: var(--color-white-back);
 }
 
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: dark){
   :root{
     --color-white-back: var(--color-dark-back);
     --color-black: var(--color-orange);

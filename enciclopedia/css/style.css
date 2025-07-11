@@ -32,6 +32,7 @@ html {
     'main main'
     'section section'
     'herancacss herancacss'
+    'flag flag'
     'footer footer';
 }
 /*---------------------------Grid---------------------------*/
@@ -297,6 +298,7 @@ a{
   color: white;
   display: flex;
   align-items: center;
+  flex-direction: row;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -307,12 +309,23 @@ a{
 span{color: rgb(6, 255, 6)}
 /*---------------------------Conteudo herança css------------------------------*/
 
-/*---------------------------Sinalizador------------------------------*/
 
 
 
 /*---------------------------Sinalizador------------------------------*/
+.flag-grid{
+  grid-area: flag;
+  border: 1px solid black;
+  scroll-margin-top: 100px;
+}
+.flag-box{
+  margin: 10px;
+  border: 1px solid black;
+}
 
+h3{padding-left: 10px;}
+
+/*---------------------------Sinalizador------------------------------*/
 
 /*---------------------------Footer------------------------------*/
 .content-footer{
