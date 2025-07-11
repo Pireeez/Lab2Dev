@@ -8,6 +8,14 @@
 :root {
   --color-gray: rgb(214, 214, 214);
   --color-orange: orangered;
+  --color-orange-hover: orangered;
+  --color-black: rgb(27, 27, 27);
+  --color-white-font: rgb(255, 255, 255);
+  --color-nav:rgb(48, 48, 48);
+  --color-gray-dark:gray;
+  --color-white-back: rgb(255, 255, 255);
+  --color-dark-back:rgb(48, 48, 48);
+  --color-dark-font: black;
 }
 .grid {
   display: grid;
@@ -16,7 +24,25 @@
     "main main"
     "aside aside"
     "footer footer";
+  background-color: var(--color-white-back);
 }
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-white-back: var(--color-dark-back);
+    --color-black: var(--color-orange);
+    --color-orange-hover: var(--color-white-font);
+    --color-gray-dark:var(--color-white-font);
+    --color-dark-font:var(--color-white-font);
+  }
+
+  .icon-social{
+    content: url(icons/instagram-orange.png);
+  }
+
+}
+
+
 @media (min-width: 980px) {
   .grid {
     display: grid;
@@ -43,7 +69,7 @@
 
 /*---Menu de Navegação---*/
 .container-nav {
-  background-color: rgb(48, 48, 48);
+  background-color: var(--color-nav);
   position: fixed;
   width: 100%;
 }
@@ -73,7 +99,7 @@
   width: 30vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.945);
-  color: white;
+  color: var(--color-white-font);
   padding: 20px;
   z-index: 1000; /* ordem de empilhamento */
 }
@@ -122,27 +148,28 @@ span {
   font-weight: bold;
 }
 span:hover {
-  color: var(--color-orange);
+  color: var(--color-orange-hover);
   text-decoration: underline;
   cursor: pointer;
 }
 h1 {
   font-size: 1.5rem;
+  color: var(--color-black);
 }
 .h1-textcontent:hover {
-  color: var(--color-orange);
+  color: var(--color-orange-hover);
   text-decoration: underline;
   cursor: pointer;
   font-size: 1.51rem;
 }
 p {
-  color: grey;
+  color: var(--color-gray-dark);
   font-size: 1rem;
   margin: 20px 0px;
 }
 .text-little {
   margin-top: 2px;
-  color: grey;
+  color: var(--color-gray-dark);
   font-size: 1.2rem;
 }
 .img-little {
@@ -207,10 +234,11 @@ p {
   font-size: 0.9rem;
   margin: 2px;
   cursor: pointer;
+  color: var(--color-dark-font);
 }
 .box-list ul li:hover {
-  background-color: rgb(255, 123, 0);
-  color: white;
+  background-color: var(--color-orange);
+  color: var(--color-white-font);
 }
 /*---Conteudo das Categorias---*/
 /*------------------Conteúdo Aside------------------*/
@@ -218,7 +246,7 @@ p {
 /*---Conteúdo Footer---*/
 .container-footer {
   grid-area: footer;
-  background-color: rgb(48, 48, 48);
+  background-color: var(--color-nav);
   text-align: center;
 }
 .content-footer p {
@@ -229,7 +257,7 @@ p {
 
 /*---Segundo Navegador---*/
 .container-nav-2{
-    background-color: rgb(48, 48, 48);
+    background-color: var(--color-nav);
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -252,7 +280,7 @@ p {
     background-color: rgba(128, 128, 128, 0.514);
     border: none;
     padding: 8px;
-    color: white;
+    color: var(--color-white-font);
     width: 100%;
     margin: 0px 10px;
     outline: none;
